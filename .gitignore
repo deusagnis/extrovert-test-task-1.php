@@ -1,0 +1,7 @@
+# Ignore IDEA directory
+.idea
+
+# Ignore packages directory
+vendor
+
+.env.php
