@@ -11,7 +11,7 @@ class Auth
     protected string $validResponse;
 
 
-    public function __construct($users)
+    public function __construct(array $users)
     {
         $this->users = $users;
 
