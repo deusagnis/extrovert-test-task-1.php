@@ -6,19 +6,19 @@ use Extrovert\TestTask1\Facades\AuthEnvUser;
 
 class Main
 {
-    protected array $config;
+    protected array $authConfig;
 
     protected string $username;
 
-    public function __construct($config)
+    public function __construct(array $authConfig)
     {
-        $this->config = $config;
+        $this->authConfig = $authConfig;
     }
 
     public function view(){
-        $authEnvUser = new AuthEnvUser($this->config['auth']);
+        $authEnvUser = new AuthEnvUser($this->authConfig);
         $this->username = $authEnvUser->auth();
 
-        echo 'You are logged in as: ' . $this->username;
+        echo include ('./src/Views/main.php');
     }
 }
